@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-brand-ink antialiased;
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-colors;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-orange text-white hover:bg-brand-orange-dark;
+  }
+
+  .btn-outline {
+    @apply btn border border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white;
+  }
+}
+
+/* Thin, elegant scrollbar to match a clean retail feel */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cdcfce;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
