@@ -1,6 +1,0 @@
-- Prefers WooCommerce REST API over GraphQL for headless WooCommerce storefronts. Confidence: 0.7
-- Prefers replicating an existing reference site's design pixel-accurately ("same to same") rather than an original design. Confidence: 0.6
-- Deploys/hosts the Next.js storefront on Netlify via GitHub (Git import). Confidence: 0.7
-- Prefers the agent to independently reproduce, diagnose, and fix reported bugs (running/verifying the app) rather than only explaining causes. Confidence: 0.7
-- Prefers projects to be made security-conscious before sharing/hosting: secrets kept out of version control (in gitignored .env.local), .env.example with empty placeholders, and credentials kept server-only (never NEXT_PUBLIC_). Confidence: 0.8
-- Values professional, deploy-ready project scaffolding (linting/ESLint, clean config, and a thorough README with setup, security, and deployment docs). Confidence: 0.7
