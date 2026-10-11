@@ -142,6 +142,14 @@ Card payments require a configured gateway and the matching `payment_method` id.
 
 4. Deploy. `netlify.toml` sets Node 20 and installs dev dependencies.
 
+`NEXT_PUBLIC_WP_BASE_URL` is an intentionally public WordPress origin, not a
+credential. `netlify.toml` excludes only that key from Netlify secrets scanning
+because Next.js can embed it in generated build output, including webpack caches.
+Scanning remains enabled for WooCommerce credentials and all other secrets.
+Keep `.env.example` placeholder-only; `.netlify/` is ignored to prevent generated
+Netlify artifacts from being committed. Ignoring artifacts does not exclude them
+from build-output scanning.
+
 > **Note:** the WordPress host's anti-bot is solved server-side, so it should work
 > from Netlify. If products render locally but not on Netlify, the host may be
 > blocking Netlify's IPs — whitelist them or disable the host's bot protection.
